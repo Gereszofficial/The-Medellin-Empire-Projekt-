@@ -26,23 +26,46 @@
   </section>
 
   <section id="about" class="container" style="padding:60px 0 100px;">
-    <h2 style="margin:0 0 10px;">Mi ez az oldal?</h2>
-    <p style="color:var(--muted); max-width:820px;">
-      // <code>///</code> //
-      <strong></strong> // <code>//</code>//
-      ///
+    <h2 class="reveal" style="margin:0 0 10px;">The Medellin Empire – A dzsungel mélyén nem menekülhetsz…</h2>
+    <p class="reveal" style="color:var(--muted); max-width:820px;">
+      A The Medellin Empire egy történetközpontú FPS, amely a dzsungel mélyén játszódik, <code>ahol a kartellnek dolgozva építesz bűnbirodalmat</code>Veszélyes küldetések
+      <strong></strong> illegális bizniszek és halálos leszámolások várnak rád – itt nincs szabály, <code>csak hatalom,</code>pénz és túlélés. Emelkedj fel az alvilág élére… vagy tűnj el örökre.
     </p>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-const videoSrc = '/media/sample.mp4' // Cseréld saját videódra
-const poster = '' // Ha van poszterképed, add meg (pl. '/media/poster.jpg')
+const videoSrc = '/media/sample.mp4'
+const poster = ''
 
 function onDownload(e){
-  // Később ide jöhet telemetria/backend hívás is
   console.log('Play Now clicked')
 }
+
+let observer
+
+onMounted(() => {
+  observer = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view')   // belép: beúszik
+      } else {
+        e.target.classList.remove('in-view')// kilép: eltűnik
+      }
+    }
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -10% 0px' // kis hiszterézis, hogy ne villogjon
+  })
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
+})
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect()
+})
 </script>
+
+

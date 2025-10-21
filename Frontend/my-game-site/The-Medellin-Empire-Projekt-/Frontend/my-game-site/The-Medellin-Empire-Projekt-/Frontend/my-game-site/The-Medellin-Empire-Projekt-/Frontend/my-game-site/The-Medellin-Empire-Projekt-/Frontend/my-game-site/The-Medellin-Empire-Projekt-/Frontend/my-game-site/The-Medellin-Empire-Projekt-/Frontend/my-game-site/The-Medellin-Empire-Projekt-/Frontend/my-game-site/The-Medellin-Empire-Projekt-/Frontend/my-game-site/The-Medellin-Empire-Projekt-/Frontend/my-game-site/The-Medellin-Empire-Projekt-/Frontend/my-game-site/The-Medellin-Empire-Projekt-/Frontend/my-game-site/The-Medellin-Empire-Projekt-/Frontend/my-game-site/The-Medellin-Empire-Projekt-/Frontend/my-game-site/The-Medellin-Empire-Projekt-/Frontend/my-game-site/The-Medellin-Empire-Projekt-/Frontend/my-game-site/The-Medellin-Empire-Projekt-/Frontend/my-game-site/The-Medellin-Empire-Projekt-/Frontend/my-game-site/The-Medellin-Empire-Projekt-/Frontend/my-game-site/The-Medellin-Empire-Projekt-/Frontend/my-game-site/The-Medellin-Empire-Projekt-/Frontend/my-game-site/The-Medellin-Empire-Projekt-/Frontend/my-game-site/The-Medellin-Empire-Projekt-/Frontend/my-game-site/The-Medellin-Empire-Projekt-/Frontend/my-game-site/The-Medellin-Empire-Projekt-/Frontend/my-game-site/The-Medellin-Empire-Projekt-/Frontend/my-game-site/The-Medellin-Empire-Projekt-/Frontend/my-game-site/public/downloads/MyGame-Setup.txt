@@ -1,0 +1,4 @@
+My Game Installer (placeholder)
+-------------------------------
+Ezt a fájlt csak példaként csomagoltuk a projekthez.
+A végleges verzióban cseréld le a megfelelő telepítőre vagy ZIP-re.
