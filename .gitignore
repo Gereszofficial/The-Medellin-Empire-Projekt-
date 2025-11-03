@@ -1,0 +1,8 @@
+
+Frontend/my-game-site/public/downloads/*.exe
+Frontend/my-game-site/public/downloads/*.zip
+
+
+Frontend/my-game-site/dist/
+
+*.zip

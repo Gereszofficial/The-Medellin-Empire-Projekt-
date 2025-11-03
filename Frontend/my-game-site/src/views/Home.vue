@@ -17,7 +17,7 @@
         Merülj el a dzsungel mélyén, és vedd fel a harcot a könyörtelen Medellín kartellel ebben az adrenalindús FPS-ben <em>Próbáld ki most ingyen!</em>  
       </p>
       <div class="cta">
-        <a class="btn btn-primary" href="/downloads/MyGame-Setup.txt" download @click="onDownload">
+        <a class="btn btn-primary" href="/downloads/The Medellín Empire.zip" download @click="onDownload">
           ▶ Play Now
         </a>
         <a class="btn" href="#about">Learn More</a>

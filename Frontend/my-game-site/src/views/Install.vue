@@ -7,14 +7,13 @@
 
     <ol style="line-height:1.8; max-width:820px;">
       <li>Nyomd meg a <em>Play Now</em> gombot a nyitóoldalon, és töltsd le a telepítőt.</li>
-      <li>Futtasd a letöltött telepítőt rendszergazdai jogosultsággal.</li>
-      <li>Válaszd ki a célmappát, majd kövesd a varázsló utasításait.</li>
+      <li>Futtasd a letöltött telepítőt.</li>
       <li>Első indításnál a kliens letölti a szükséges frissítéseket.</li>
-      <li>Jelentkezz be, vagy hozz létre fiókot, és már játszhatsz is.</li>
+      
     </ol>
 
-    <div style="margin-top:24px;">
-      <a class="btn btn-primary" href="/downloads/MyGame-Setup.txt" download>Play Now</a>
+    <div style="margin-top:28px;">
+      <a class="btn btn-primary" href="/downloads/The Medellín Empire.zip" download>Play Now</a>
     </div>
   </section>
 </template>
